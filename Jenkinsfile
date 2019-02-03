@@ -6,7 +6,7 @@ pipeline{
                 tag '3.0'
             }
             steps{
-                echo "Hello World Building Tag"
+                echo "Build with Tags"
             }
         }
     }
