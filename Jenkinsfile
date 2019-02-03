@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage('Build'){
             when{
-                tag '3.0'
+                tag '6.0'
             }
             steps{
                 echo "Build with Tags"
