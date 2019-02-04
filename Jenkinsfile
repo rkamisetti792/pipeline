@@ -1,12 +1,14 @@
 pipeline{
-    agent any
+    agent{
+        label: 'master'
+    }
     stages{
         stage('Build'){
             when{
-                buildingTag()
+                changeset glob: '*.js'
             }
             steps{
-                echo "Build with Tags"
+                echo "Hello ChangeSet"
             }
         }
     }
