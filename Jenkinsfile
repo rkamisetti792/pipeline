@@ -1,12 +1,16 @@
 pipeline{
-    agent any
+    agent{
+        label 'master'
+    }
     stages{
         stage('Build'){
             when{
-                tag '6.0'
+                changeRequest()
             }
             steps{
-                echo "Build with Tags"
+                timestamps{
+                    echo "Pull Request"
+                }
             }
         }
     }
