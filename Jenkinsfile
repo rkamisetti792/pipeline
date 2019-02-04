@@ -8,7 +8,9 @@ pipeline{
                 changeRequest()
             }
             steps{
-                echo "Pull Request"
+                timestamps{
+                    echo "Pull Request"
+                }
             }
         }
     }
