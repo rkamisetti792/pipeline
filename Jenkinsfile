@@ -5,7 +5,7 @@ pipeline{
     stages{
         stage('Build'){
             when{
-                changeRequest title "Pull Request"
+                changeRequest title:"Pull Request"
             }
             steps{
                 timestamps{
