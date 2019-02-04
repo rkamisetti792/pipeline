@@ -13,5 +13,12 @@ pipeline{
                 }
             }
         }
+        stage("Test"){
+            steps{
+                timestamps{
+                    echo "Test Pull Request"
+                }
+            }
+        }
     }
 }
