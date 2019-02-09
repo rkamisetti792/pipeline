@@ -1,13 +1,12 @@
 pipeline{
     agent any
     options{
-        timestamps()
-        overrideIndexTriggers(false)
+        checkoutToSubdirectory('someSubDir')
     }
     stages{
         stage('Build'){
             steps{
-                echo 'Hello World..!_five'
+                echo 'Hello World'
             }
         }
     }
