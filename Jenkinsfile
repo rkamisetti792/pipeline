@@ -1,16 +1,13 @@
 pipeline{
-    agent{
-        label 'master'
+    agent any
+    options{
+        timestamps()
+        overrideIndexTriggers(false)
     }
     stages{
         stage('Build'){
-            when{
-                changeset glob: '*.js'
-           }
             steps{
-                timestamps{
-                    echo "Pull Request"
-                }
+                echo 'Hello World..!'
             }
         }
     }
